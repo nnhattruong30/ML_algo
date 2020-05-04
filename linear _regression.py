@@ -22,7 +22,7 @@ opt = tf.keras.optimizers.SGD(learning_rate = lr)
 # Dinh nghia ham loss
 @tf.function
 def Loss(theta):
-    return tf.reduce_mean((tf.linalg.matmul(tf.transpose(theta), X) - Y)**2) # Ham f(theta, X, Y) = mean((theta^T.X - Y)^2)
+    return tf.reduce_mean((tf.linalg.matmul(tf.transpose(theta), X) - Y)**2)/2. # Ham f(theta, X, Y) = mean((theta^T.X - Y)^2)
 
 while True:
     with tf.GradientTape() as tape:
