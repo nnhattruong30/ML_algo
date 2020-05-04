@@ -16,8 +16,7 @@ opt = tf.optimizers.SGD(lr = alpha)
 while True: 
     with tf.GradientTape() as tape:
         loss = Loss(theta)
-        print(loss)
-    
+        
     grads = tape.gradient(loss, [theta])
     opt.apply_gradients(zip(grads, [theta]))
     if abs(grads[0].numpy()) < eps: break

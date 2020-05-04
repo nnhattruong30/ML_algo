@@ -17,8 +17,8 @@ plt.plot(theta, loss(theta))
 
 # Khoi tao tham so
 theta = -4
-alpha = 1
-eps = 0.0001
+alpha = 0.1
+eps = 0.001
 
 # Lap
 # Cap nhat tham so
