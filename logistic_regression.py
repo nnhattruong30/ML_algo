@@ -23,7 +23,7 @@ theta = np.array([[0.], [1.], [2.]])
 lr = 0.1
 eps = 1e-4
 x_vis = np.array([-7., 20.])
-y_vis = -theta[1][0]/theta[2][0] * x_vis - theta[0][0]/theta[2][0]
+y_vis = -theta[1][0]/theta[2][0] * x_vis - theta[0][0]/theta[2][0]  # Ham f(x) = w1x1 + w2x2 + w3 
 plt.plot(x_vis, y_vis)
 
 def sigmoid(x):
